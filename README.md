@@ -60,7 +60,6 @@ Example:
 ## 🧑‍💻 Author
 **Jenna Halliwell**  
 BSc Computer Science with Cybersecurity — University of Salford  
-📧 *info@discoverdubai.com*  
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/jennahhalliwell)
 
 ---
