@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Discover Dubai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/logo.jpeg" alt="Discover Dubai Logo" class="hero-logo" />
+    <h1>Welcome to Dubai</h1>
+    <p>The city of innovation, luxury, and unforgettable experiences.</p>
+    <a href="things.html" class="btn">Explore Things to Do</a>
+  </section>
+
+  <!-- Floating Book a Trip Button -->
+  <button id="bookBtn" class="top-book">Book a Trip</button>
+
+  <!-- Floating Contact Us Button -->
+  <button id="contactBtn" class="top-contact">Contact Us</button>
+
+  <!-- Book a Trip Modal -->
+  <div id="bookModal" class="modal">
+    <div class="modal-content">
+      <span class="close book-close">&times;</span>
+      <h2>Book Your Dubai Adventure</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+
+        <label for="nights">How many nights?</label>
+        <select id="nights" required>
+          <option value="">Select</option>
+          <option value="2">2 nights</option>
+          <option value="3">3 nights</option>
+          <option value="4">4 nights</option>
+          <option value="5+">5+ nights</option>
+        </select>
+
+        <label>Include Flights?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="flights" value="Yes" required /> Yes</label>
+          <label><input type="radio" name="flights" value="No" required /> No</label>
+        </div>
+
+        <textarea placeholder="Message / Preferences (optional)"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Contact Us Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close contact-close">&times;</span>
+      <h2>Contact Us</h2>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@discoverdubai.com</p>
+        <p><strong>Phone:</strong> +971 4 123 4567</p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="things.html">Things to Do</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="info.html">Information</a></li>
+        
+      </ul>
+    </nav>
+    <p>&copy; 2025 Discover Dubai. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal Scripts -->
+  <script>
+    // Book Modal
+    const bookBtn = document.getElementById("bookBtn");
+    const bookModal = document.getElementById("bookModal");
+    const bookClose = bookModal.querySelector(".book-close");
+
+    bookBtn.onclick = () => bookModal.style.display = "flex";
+    bookClose.onclick = () => bookModal.style.display = "none";
+
+    // Contact Modal
+    const contactBtn = document.getElementById("contactBtn");
+    const contactModal = document.getElementById("contactModal");
+    const contactClose = contactModal.querySelector(".contact-close");
+
+    contactBtn.onclick = () => contactModal.style.display = "flex";
+    contactClose.onclick = () => contactModal.style.display = "none";
+
+    // Click outside to close modals
+    window.onclick = (e) => {
+      if (e.target === bookModal) bookModal.style.display = "none";
+      if (e.target === contactModal) contactModal.style.display = "none";
+    };
+  </script>
+
+</body>
+</html>
+
+
+
+
+

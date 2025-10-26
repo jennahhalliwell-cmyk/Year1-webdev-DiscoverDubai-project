@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Things to Do in Dubai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <h1>Top 9 Things to Do in Dubai</h1>
+
+    <div class="card-grid">
+      <!-- Each card uses data attributes for modal content -->
+      <div class="card" data-title="Burj Khalifa" data-desc="Eight world records were held by the Burj Khalifa, including the highest livable floor, the longest lift travel distance, and the tallest skyscraper. A must-see skyscraper.">
+        <img src="images/Burjkhalifa.jpeg" alt="Burj Khalifa">
+        <h3>Visit Burj Khalifa</h3>
+      </div>
+
+      <div class="card" data-title="Dubai Mall" data-desc="This 1.1 million square metre shopping haven is filled with more than 1,200 stores, 200 restaurants, a huge underwater aquarium, and much more.">
+        <img src="images/Mall.jpeg" alt="Dubai Mall">
+        <h3>Explore Dubai Mall</h3>
+      </div>
+
+      <div class="card" data-title="Desert Safari" data-desc="Camel rides, dune bashing, and breathtaking sunsets.">
+        <img src="images/Desert.jpeg" alt="Desert Safari">
+        <h3>Desert Safari Adventure</h3>
+      </div>
+
+      <div class="card" data-title="Jumeirah Beach" data-desc="Unwind on the stunning beach with its white sand and glistening ocean.">
+        <img src="images/Beach.jpeg" alt="Jumeirah Beach">
+        <h3>Relax at Jumeirah Beach</h3>
+      </div>
+
+      <div class="card" data-title="Dubai Aquarium" data-desc="Located inside Dubai Mall, it's one of the largest suspended aquariums in the world.">
+        <img src="images/Aquarium.jpeg" alt="Dubai Aquarium">
+        <h3>Visit the Dubai Aquarium</h3>
+      </div>
+
+      <div class="card" data-title="Museum of the Future" data-desc="Get a glimpse of the future at this museum that uses VR/AR and other cutting-edge technology.">
+        <img src="images/Museum.jpeg" alt="Museum of the Future">
+        <h3>Visit Museum of the Future</h3>
+      </div>
+
+      <div class="card" data-title="Dubai Frame" data-desc="With its enormous golden frame, Dubai's historic and modern districts can be seen in all their glory. Additionally, it is the world's largest frame.">
+        <img src="images/Frame.jpeg" alt="Dubai Frame">
+        <h3>Visit Dubai Frame</h3>
+      </div>
+
+      <div class="card" data-title="Dubai Fountain" data-desc="Watch water, light and music shows next to Burj Khalifa and Dubai Mall.">
+        <img src="images/Fountain.jpeg" alt="Dubai Fountain">
+        <h3>Enjoy the Dubai Fountain</h3>
+      </div>
+
+      <div class="card" data-title="Global Village" data-desc="Seasonal cultural theme park with food, shows, and pavilions from around the world.">
+        <img src="images/Village.jpeg" alt="Global Village">
+        <h3>Enjoy Global Village</h3>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Back to Top">⬆</button>
+
+  <!-- Footer Navigation -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="things.html" class="active">Things to Do</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="info.html">Information</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 Discover Dubai. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal & Scroll Scripts -->
+  <script>
+    // Modal setup
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDesc = document.getElementById("modal-desc");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", () => {
+        modalTitle.textContent = card.getAttribute("data-title");
+        modalDesc.textContent = card.getAttribute("data-desc");
+        modal.style.display = "block";
+      });
+    });
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    window.onclick = e => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+
+    // Scroll-to-top button
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+
+</body>
+</html>

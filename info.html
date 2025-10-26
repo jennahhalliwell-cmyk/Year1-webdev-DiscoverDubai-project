@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Information - Discover Dubai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero Banner -->
+  <section class="page-banner" style="background-image: url('images/info-banner.jpeg');">
+    <div class="banner-content">
+      <h1>Visitor Information</h1>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <h2>Essential Info for Your Trip</h2>
+
+    <ul class="info-list">
+      <li><strong>🌤️ Weather:</strong> Dubai has a desert climate with hot summers (up to 45°C) and mild winters (18–28°C).</li>
+      <li><strong>🏨 Accommodation:</strong> Dubai offers everything from budget-friendly stays to luxury 7-star hotels.</li>
+      <li><strong>🛬 Travel Accessibility:</strong> Well connected via metro, taxis, buses, airports, and even cruise ports.</li>
+      <li><strong>💰 Currency:</strong> The local currency is UAE Dirham (AED). 1 USD ≈ 3.67 AED.</li>
+      <li><strong>🛂 Visas:</strong> Most visitors can get a visa on arrival for 30–90 days. Check with your airline or embassy.</li>
+      <li><strong>🕰️ Best Time to Visit:</strong> November to March offers cooler weather, ideal for sightseeing and outdoor activities.</li>
+      <li><strong>🕌 Etiquette:</strong> Dubai is modern but rooted in Islamic culture. Dress modestly, especially in malls and public places.</li>
+      <li><strong>🧼 Safety:</strong> Dubai is extremely safe with strict laws and clean streets. Petty crime is rare.</li>
+      <li><strong>📶 Internet:</strong> Free Wi-Fi is widely available. Tourist SIM cards can be purchased at the airport or malls.</li>
+      <li><strong>👨‍👩‍👧‍👦 Family Friendly:</strong> Attractions like Dubai Aquarium, KidZania, and Legoland are perfect for children.</li>
+      <li><strong>📞 Emergency Numbers:</strong> Police: 999, Ambulance: 998, Tourist Helpline: 800 4888</li>
+    </ul>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Back to Top">⬆</button>
+
+  <!-- Footer -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="things.html">Things to Do</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="info.html" class="active">Information</a></li>
+        
+      </ul>
+    </nav>
+    <p>&copy; 2025 Discover Dubai. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll Button Script -->
+  <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+
+</body>
+</html>
+
+
